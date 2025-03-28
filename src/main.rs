@@ -1,5 +1,7 @@
 mod guassian_elimination;
+mod wgpu_helpers;
 
-fn main() -> Result<(), Box<dyn std::error::Error>> {
+fn main() {
+    env_logger::init();
     futures::executor::block_on(guassian_elimination::model::run())
 }
